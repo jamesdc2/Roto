@@ -1,0 +1,62 @@
+<h1>Listing active_stats</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Team</th>
+    <th>Name</th>
+    <th>Gp</th>
+    <th>Fgm</th>
+    <th>Fga</th>
+    <th>Ftm</th>
+    <th>Fta</th>
+    <th>Reb</th>
+    <th>Ast</th>
+    <th>Stl</th>
+    <th>Blk</th>
+    <th>Pts</th>
+    <th>Fpts</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @active_stats.each do |active_stat| %>
+  <tr>
+    <td><%= active_stat.id %></td>
+    <td><%= active_stat.team_id %></td>
+    <td><%= active_stat.name %></td>
+    <td><%= active_stat.gp %></td>
+    <td><%= active_stat.fgm %></td>
+    <td><%= active_stat.fga %></td>
+    <td><%= active_stat.ftm %></td>
+    <td><%= active_stat.fta %></td>
+    <td><%= active_stat.reb %></td>
+    <td><%= active_stat.ast %></td>
+    <td><%= active_stat.stl %></td>
+    <td><%= active_stat.blk %></td>
+    <td><%= active_stat.pts %></td>
+    <td><%= active_stat.fpts %></td>
+    <td><%= link_to 'Show', active_stat %></td>
+    <td><%= link_to 'Edit', edit_active_stat_path(active_stat) %></td>
+    <td><%= link_to 'Destroy', active_stat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= @team_total_gp %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= @team_total_reb %></td>
+    <td><%= @team_total_ast %></td>
+    <td><%= @team_total_stl %></td>_
+</table>
+
+<br />
+
+<%= link_to 'Back to Team Listings', teams_path  %>
+<%= link_to 'New Active stat', new_active_stat_path %>

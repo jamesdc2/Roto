@@ -1,0 +1,73 @@
+<%= form_for(@active_stat) do |f| %>
+  <% if @active_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@active_stat.errors.count, "error") %> prohibited this active_stat from being saved:</h2>
+
+      <ul>
+      <% @active_stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :team_id %><br />
+    <%= f.number_field :team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :gp %><br />
+    <%= f.number_field :gp %>
+  </div>
+  <div class="field">
+    <%= f.label :fgm %><br />
+    <%= f.number_field :fgm %>
+  </div>
+  <div class="field">
+    <%= f.label :fga %><br />
+    <%= f.number_field :fga %>
+  </div>
+  <div class="field">
+    <%= f.label :ftm %><br />
+    <%= f.number_field :ftm %>
+  </div>
+  <div class="field">
+    <%= f.label :fta %><br />
+    <%= f.number_field :fta %>
+  </div>
+  <div class="field">
+    <%= f.label :reb %><br />
+    <%= f.number_field :reb %>
+  </div>
+  <div class="field">
+    <%= f.label :ast %><br />
+    <%= f.number_field :ast %>
+  </div>
+  <div class="field">
+    <%= f.label :stl %><br />
+    <%= f.number_field :stl %>
+  </div>
+  <div class="field">
+    <%= f.label :blk %><br />
+    <%= f.number_field :blk %>
+  </div>
+  <div class="field">
+    <%= f.label :pts %><br />
+    <%= f.number_field :pts %>
+  </div>
+  <div class="field">
+    <%= f.label :fpts %><br />
+    <%= f.number_field :fpts %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

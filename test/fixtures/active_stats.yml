@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  team_id: 1
+  name: MyString
+  gp: 1
+  fgm: 1
+  fga: 1
+  ftm: 1
+  fta: 1
+  reb: 1
+  ast: 1
+  stl: 1
+  blk: 1
+  pts: 1
+  fpts: 1
+
+two:
+  id: 1
+  team_id: 1
+  name: MyString
+  gp: 1
+  fgm: 1
+  fga: 1
+  ftm: 1
+  fta: 1
+  reb: 1
+  ast: 1
+  stl: 1
+  blk: 1
+  pts: 1
+  fpts: 1
