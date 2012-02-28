@@ -1,4 +1,6 @@
 Roto::Application.routes.draw do
+  get "standings/index"
+
   resources :teams
 
   resources :active_stats

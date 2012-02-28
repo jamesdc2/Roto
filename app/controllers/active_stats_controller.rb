@@ -83,7 +83,7 @@ class ActiveStatsController < ApplicationController
   # GET /active_stats/team/1
   # GET /active_stats/team/1.json
   def team
-    @team = Team.find(params[:id])
+    @team = Team.where('team_id = ?',  params[:id])
     @active_stats = ActiveStat.where('team_id = ?', params[:id])
 
     respond_to do |format|
