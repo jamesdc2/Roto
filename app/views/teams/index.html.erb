@@ -14,7 +14,7 @@
 <% @teams.each do |team| %>
   <tr>
     <td><%= team.team_id %></td>
-    <td><%= link_to team.name, team, :controller => 'active_stats', :action => 'team' %></td>
+    <td><%= link_to team.name, { :controller => 'active_stats', :action => 'team', :id => team.team_id } %></td>
     <td><%= team.city %></td>
     <td><%= team.owner %></td>
     <td><%= link_to 'Show', team %></td>
@@ -23,6 +23,7 @@
   </tr>
 <% end %>
 </table>
+
 
 <br />
 
